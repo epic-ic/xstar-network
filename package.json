@@ -10,12 +10,17 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check:links": "astro build --outDir _site/xstar-network && linkinator xstar-network --server-root _site --recurse"
+    "check:links": "astro build --outDir _site/xstar-network && linkinator xstar-network --server-root _site --recurse",
+    "check:accessibility": "astro build && playwright test"
   },
   "dependencies": {
     "astro": "7.4.11"
   },
   "devDependencies": {
-    "linkinator": "8.1.0"
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.65.0",
+    "@types/node": "24.19.2",
+    "linkinator": "8.1.0",
+    "playwright-core": "1.65.0"
   }
 }
