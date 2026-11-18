@@ -9,9 +9,13 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check:links": "astro build --outDir _site/xstar-network && linkinator xstar-network --server-root _site --recurse"
   },
   "dependencies": {
     "astro": "7.4.11"
+  },
+  "devDependencies": {
+    "linkinator": "8.1.0"
   }
 }
