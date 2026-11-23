@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [main, mrc-7007-ci-deploy]
   workflow_dispatch:
 
 permissions:
