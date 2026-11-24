@@ -1,16 +1,20 @@
 ---
+const base = import.meta.env.BASE_URL;
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+		<link rel="icon" href={`${base}/favicon.ico`} />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>xSTAR</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<main>
+			<h1>xSTAR</h1>
+			<p>The new xSTAR website is being built here. Until it's ready, the current site is at <a href="https://www.xstar-network.org/">www.xstar-network.org</a>.</p>
+		</main>
 	</body>
 </html>
