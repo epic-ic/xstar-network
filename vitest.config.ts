@@ -7,7 +7,7 @@ export default getViteConfig({
         coverage: {
             provider: 'v8',
             reporter: ['text'],
-            include: ['src/content/schemas.ts'],
+            include: ['src/content/schemas.ts', 'scripts/references.ts'],
             thresholds: {100: true},
         },
     },
