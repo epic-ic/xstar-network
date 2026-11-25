@@ -1,43 +1,43 @@
-# Astro Starter Kit: Minimal
+# xSTAR website
+
+The website of xSTAR, a Wellcome-funded study of arboviruses across Africa, led from Imperial College London. It's built with [Astro](https://astro.build/) and published to GitHub Pages at <https://epic-ic.github.io/xstar-network/>. The current site is at <https://www.xstar-network.org/>.
+
+## Running it
+
+You need Node 24.22.1 (the version in `.nvmrc`).
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Then open <http://localhost:4321/xstar-network/>.
 
-## 🚀 Project Structure
+## Commands
 
-Inside of your Astro project, you'll see the following folders and files:
+| Command | What it does |
+|---|---|
+| `npm run dev` | Runs the site locally, reloading as you edit |
+| `npm run build` | Checks content references, then builds the site into `dist/` |
+| `npm run preview` | Serves the built site from `dist/` |
+| `npm test` | Runs the unit tests |
+| `npm run coverage` | Runs the unit tests and fails below 100% coverage |
+| `npm run check:types` | Type-checks the site with `astro check` |
+| `npm run check:links` | Builds the site as Pages serves it and checks every link |
+| `npm run check:accessibility` | Builds the site and checks each page against WCAG 2.2 AA with axe |
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+CI runs the build and every check on each pull request. Every merge to `main` deploys.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Content
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Content lives in `src/content/`, and `src/content.config.ts` sets the rules each item must follow.
 
-Any static assets, like images, can be placed in the `public/` directory.
+| Collection | Where | One item is |
+|---|---|---|
+| Partners | `partners.yaml` | A partner institution, with its logo in `src/assets/partners/` |
+| Publications | `publications.yaml` | A paper, by its DOI |
+| People | `people/<language>/` | A Markdown file per person |
+| News | `news/<language>/` | A Markdown file per post |
+| Pages | `pages/<language>/` | A Markdown file per page, such as About |
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+A build fails if an item breaks its collection's rules, or names a partner that doesn't exist.
