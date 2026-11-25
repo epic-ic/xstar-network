@@ -1,0 +1,74 @@
+- id: ahri
+  name: Armauer Hansen Research Institute
+  country: ET
+  website: https://ahri.gov.et/
+  logo: ../assets/partners/ahri.png
+- id: cambridge
+  name: University of Cambridge
+  country: GB
+  website: https://www.cam.ac.uk/
+  logo: ../assets/partners/cambridge.png
+- id: fors
+  name: Fondation pour la Recherche Scientifique
+  country: BJ
+  logo: ../assets/partners/fors.png
+- id: idrc
+  name: Infectious Diseases Research Collaboration
+  country: UG
+  website: https://www.idrc-uganda.org/
+  logo: ../assets/partners/idrc.png
+- id: ilorin
+  name: University of Ilorin
+  country: NG
+  website: https://www.unilorin.edu.ng/
+  logo: ../assets/partners/ilorin.webp
+- id: imperial
+  name: Imperial College London
+  country: GB
+  website: https://www.imperial.ac.uk/
+  logo: ../assets/partners/imperial.png
+  order: 1
+- id: pasteur-dakar
+  name: Institut Pasteur de Dakar
+  country: SN
+  website: https://www.pasteur.sn/
+  logo: ../assets/partners/pasteur-dakar.png
+- id: pasteur-madagascar
+  name: Institut Pasteur de Madagascar
+  country: MG
+  website: https://www.pasteur.mg/
+  logo: ../assets/partners/pasteur-madagascar.png
+- id: kcmc
+  name: KCMC University
+  country: TZ
+  website: https://kcmuco.ac.tz/
+  logo: ../assets/partners/kcmc.png
+- id: lnsp
+  name: Laboratoire National de Santé Publique
+  country: GA
+  logo: ../assets/partners/lnsp.png
+- id: lome
+  name: Université de Lomé
+  country: TG
+  website: https://univ-lome.tg/
+  logo: ../assets/partners/lome.png
+- id: lshtm
+  name: London School of Hygiene & Tropical Medicine
+  country: GB
+  website: https://www.lshtm.ac.uk/
+  logo: ../assets/partners/lshtm.png
+- id: pasteur
+  name: Institut Pasteur
+  country: FR
+  website: https://www.pasteur.fr/
+  logo: ../assets/partners/pasteur.jpg
+- id: florida
+  name: University of Florida
+  country: US
+  website: https://www.ufl.edu/
+  logo: ../assets/partners/florida.png
+- id: ucsf
+  name: University of California, San Francisco
+  country: US
+  website: https://www.ucsf.edu/
+  logo: ../assets/partners/ucsf.jpg
