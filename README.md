@@ -18,6 +18,7 @@ Then open <http://localhost:4321/xstar-network/>.
 | Command | What it does |
 |---|---|
 | `npm run dev` | Runs the site locally, reloading as you edit |
+| `npm run prebuild` | Checks content references only. `npm run build` runs it first by itself |
 | `npm run build` | Checks content references, then builds the site into `dist/` |
 | `npm run preview` | Serves the built site from `dist/` |
 | `npm test` | Runs the unit tests |
