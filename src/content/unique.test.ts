@@ -11,10 +11,11 @@ const loaderOf = (entries: { id: string; data: Record<string, unknown> }[]) => {
   const loader: Loader = {
     name: 'stand-in',
     load: async () => {
+      await new Promise((resolve) => setTimeout(resolve));
       loaded = true;
     },
   };
-  const context = { collection: 'partners', store: { values: () => entries } } as unknown as LoaderContext;
+  const context = { collection: 'partners', store: { values: () => (loaded ? entries : []) } } as unknown as LoaderContext;
   return { loader, context, wasLoaded: () => loaded };
 };
 
