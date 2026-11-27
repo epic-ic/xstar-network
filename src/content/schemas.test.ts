@@ -42,6 +42,10 @@ describe('partners', () => {
     expect(partnerSchema(image).safeParse({ ...partner, country: 'United Kingdom' }).success).toBe(false);
   });
 
+  test('rejects two capital letters that are not a country, like UK for GB', () =>{
+    expect(partnerSchema(image).safeParse({ ...partner, country: 'UK' }).success).toBe(false);
+  });
+
   test('rejects a website that is not a web address', () => {
     expect(partnerSchema(image).safeParse({ ...partner, website: 'imperial.ac.uk' }).success).toBe(false);
   });
@@ -120,6 +124,10 @@ describe('publications', () => {
 
   test('rejects a country that is a name, not a two-letter code', () => {
     expect(publicationSchema.safeParse({ ...publication, countries: ['Senegal'] }).success).toBe(false);
+  });
+
+  test('rejects two capital letters that are not a country code', () => {
+    expect(publicationSchema.safeParse({ ...publication, countries: ['ZZ'] }).success).toBe(false);
   });
 });
 

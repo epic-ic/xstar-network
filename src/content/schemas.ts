@@ -1,13 +1,19 @@
 import { reference } from 'astro:content';
 import { z } from 'astro/zod';
+import countries from 'i18n-iso-countries';
 
 const COUNTRY_CODE = /^[A-Z]{2}$/;
 const DOI = /^10\.\d{4,9}\/\S+$/;
 
+const countryCode = z
+  .string()
+  .regex(COUNTRY_CODE)
+  .refine((code) => countries.isValid(code), 'Not a country code. Use the ISO two-letter code, like GB or NG');
+
 export const partnerSchema = (logo: z.ZodType) =>
   z.object({
     name: z.string(),
-    country: z.string().regex(COUNTRY_CODE),
+    country: countryCode,
     website: z.url().optional(),
     logo,
     order: z.int().positive().optional(),
@@ -34,7 +40,7 @@ export const newsSchema = (cover: z.ZodType) =>
 
 export const publicationSchema = z.object({
   doi: z.string().regex(DOI),
-  countries: z.array(z.string().regex(COUNTRY_CODE)).default([]),
+  countries: z.array(countryCode).default([]),
   viruses: z.array(z.string()).default([]),
 });
 
