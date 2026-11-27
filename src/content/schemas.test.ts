@@ -2,6 +2,7 @@ import { z } from 'astro/zod';
 import { describe, expect, test } from 'vitest';
 import { newsSchema, pageSchema, partnerSchema, personSchema, publicationSchema } from './schemas.ts';
 
+// Astro's image() only exists during a build, so the schemas take it as an argument, and the tests pass a plain string instead.
 const image = z.string();
 const LOGO = '../assets/partners/imperial.png';
 
