@@ -7,7 +7,8 @@ export default getViteConfig({
     coverage: {
       provider: 'v8',
       reporter: ['text'],
-      include: ['src/content/schemas.ts', 'scripts/references.ts'],
+      include: ['src/**/*.ts', 'scripts/**/*.ts'],
+      exclude: ['src/content.config.ts', 'scripts/check-references.ts'],
       thresholds: { 100: true },
     },
   },
