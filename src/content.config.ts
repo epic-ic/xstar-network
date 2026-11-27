@@ -7,11 +7,12 @@ import {
   personSchema,
   publicationSchema,
 } from './content/schemas.ts';
+import { byLanguage, unique } from './content/unique.ts';
 
 const MARKDOWN = '**/*.md';
 
 const partners = defineCollection({
-  loader: file('src/content/partners.yaml'),
+  loader: unique(file('src/content/partners.yaml'), ['name', 'order']),
   schema: ({ image }) => partnerSchema(image()),
 });
 
@@ -21,7 +22,7 @@ const publications = defineCollection({
 });
 
 const people = defineCollection({
-  loader: glob({ pattern: MARKDOWN, base: './src/content/people' }),
+  loader: unique(glob({ pattern: MARKDOWN, base: './src/content/people' }), ['name', 'order'], byLanguage),
   schema: ({ image }) => personSchema(image()),
 });
 

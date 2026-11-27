@@ -40,4 +40,4 @@ Content lives in `src/content/`, and `src/content.config.ts` sets the rules each
 | News | `news/<language>/` | A Markdown file per post |
 | Pages | `pages/<language>/` | A Markdown file per page, such as About |
 
-A build fails if an item breaks its collection's rules, or names a partner that doesn't exist.
+A build fails if an item breaks its collection's rules or names a partner that doesn't exist. It also fails if two partners have the same name or order, or two people in the same language do.
