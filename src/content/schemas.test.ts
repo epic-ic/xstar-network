@@ -42,7 +42,7 @@ describe('partners', () => {
     expect(partnerSchema(image).safeParse({ ...partner, country: 'United Kingdom' }).success).toBe(false);
   });
 
-  test('rejects two capital letters that are not a country, like UK for GB', () =>{
+  test('rejects two capital letters that are not a country, like UK for GB', () => {
     expect(partnerSchema(image).safeParse({ ...partner, country: 'UK' }).success).toBe(false);
   });
 
