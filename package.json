@@ -7,20 +7,29 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node scripts/check-references.ts",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "check:links": "astro build --outDir _site/xstar-network && linkinator xstar-network --server-root _site --recurse",
-    "check:accessibility": "astro build && playwright test"
+    "check:accessibility": "astro build && playwright test",
+    "check:types": "astro check",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "astro": "7.4.11"
+    "astro": "7.4.11",
+    "i18n-iso-countries": "7.14.0"
   },
   "devDependencies": {
+    "@astrojs/check": "0.9.12",
     "@axe-core/playwright": "4.14.0",
     "@playwright/test": "1.65.0",
     "@types/node": "24.19.2",
+    "@vitest/coverage-v8": "5.1.1",
     "linkinator": "8.1.0",
-    "playwright-core": "1.65.0"
+    "playwright-core": "1.65.0",
+    "typescript": "6.0.3",
+    "vitest": "5.1.1"
   }
 }

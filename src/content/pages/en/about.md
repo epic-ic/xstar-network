@@ -1,0 +1,10 @@
+---
+title: About Us
+description: The project aims to better understand the infection burden of mosquito borne viruses (arboviruses) across Africa.
+---
+
+xSTAR is a project funded by the Wellcome Trust and coordinated by Dr Ilaria Dorigatti at Imperial College London. The project aims to better understand the infection burden of mosquito borne viruses (arboviruses) across Africa. To do this, we are testing thousands of blood samples from across the continent for the presence of antibodies to infectious diseases such as dengue, Zika and Chikungunya. By identifying the presence of antibodies to specific diseases in a population, we can identify which viruses have circulated in that location and how many people have been exposed and are now immune to these viruses. By using a multiplex-based immunoassay, we can test for multiple different antibodies at the same time.
+
+We work with research and public health institutions in Senegal (Institut Pasteur de Dakar), Togo (Universite de Lome), Gabon (National Laboratory of Public Health), Benin (FORS), Nigeria (University of Ilorin), Ethiopia (AHRI), Tanzania (KMCU), Uganda (IDRC), and Madagascar (Institut Pasteur Madagascar). Partner teams have access to residual samples from population-based serosurveys as well as blood samples from clinical trials, which are tested in the respective labs using a standardized multiplex-based immunoassay. The assay is developed by Institut Pasteur Paris (France), who coordinates the lab training together with the London School of Hygiene and Tropical Medicine (UK). The development of analytical tools to interpret the multiplex immunoassay data is led by the University of Cambridge (UK) and Imperial College London, who coordinate modelling workshops and training activities within the network.
+
+By integrating serological data with climate and environmental datasets, xSTAR will generate regional arbovirus risk maps. These outputs will help quantify the infection burden of arboviruses across Africa to inform evidence-based intervention planning for disease control.
